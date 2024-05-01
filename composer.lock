@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84c61af57b4c8d8b767caf42ec360a3d",
+    "content-hash": "0c348c5dbf2f45efaf076c13778e83d0",
     "packages": [
         {
             "name": "brick/math",
@@ -505,6 +505,65 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "flixtechs-labs/stimulus-extra",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flixtechs-labs/stimulus-extras.git",
+                "reference": "5090f5f2df48c77268df5f2fee2df3b12b4a038e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flixtechs-labs/stimulus-extras/zipball/5090f5f2df48c77268df5f2fee2df3b12b4a038e",
+                "reference": "5090f5f2df48c77268df5f2fee2df3b12b4a038e",
+                "shasum": ""
+            },
+            "require": {
+                "hotwired-laravel/stimulus-laravel": "^0.3|^1.1",
+                "illuminate/support": "^7.0|^8.0|^9.23|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.1",
+                "orchestra/testbench": "^7.6",
+                "pestphp/pest": "^1.21",
+                "phpstan/phpstan": "^1.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "FlixtechsLabs\\TurboLaravelHelpers\\Providers\\TurboHelpersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/View/helpers.php"
+                ],
+                "psr-4": {
+                    "FlixtechsLabs\\TurboLaravelHelpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Given Ncube",
+                    "email": "given@flixtechs.co.zw",
+                    "homepage": "https://flixtechs.co.zw"
+                }
+            ],
+            "description": "The missing laravel blade helpers for turbo and stimulus",
+            "support": {
+                "issues": "https://github.com/flixtechs-labs/stimulus-extras/issues",
+                "source": "https://github.com/flixtechs-labs/stimulus-extras/tree/0.0.5"
+            },
+            "time": "2024-03-15T19:43:15+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1049,6 +1108,145 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "hotwired-laravel/stimulus-laravel",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hotwired-laravel/stimulus-laravel.git",
+                "reference": "b0de66893a32bc983c4efe3a5b980f32bdf57441"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hotwired-laravel/stimulus-laravel/zipball/b0de66893a32bc983c4efe3a5b980f32bdf57441",
+                "reference": "b0de66893a32bc983c4efe3a5b980f32bdf57441",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0",
+                "php": "^8.1|^8.2",
+                "spatie/laravel-package-tools": "^1.9.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.10|^8.1",
+                "orchestra/testbench": "^8.0|^9.1",
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HotwiredLaravel\\StimulusLaravel\\StimulusLaravelServiceProvider"
+                    ],
+                    "aliases": {
+                        "StimulusLaravel": "HotwiredLaravel\\StimulusLaravel\\Facades\\StimulusLaravel"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HotwiredLaravel\\StimulusLaravel\\": "src",
+                    "HotwiredLaravel\\StimulusLaravel\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tony Messias",
+                    "email": "tonysm@hey.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Use Stimulus in your Laravel app",
+            "homepage": "https://github.com/hotwired-laravel/stimulus-laravel",
+            "keywords": [
+                "hotwire",
+                "hotwired",
+                "laravel",
+                "stimulus",
+                "stimulus-laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/hotwired-laravel/stimulus-laravel/issues",
+                "source": "https://github.com/hotwired-laravel/stimulus-laravel/tree/1.1.0"
+            },
+            "time": "2024-03-06T03:13:48+00:00"
+        },
+        {
+            "name": "hotwired-laravel/turbo-laravel",
+            "version": "2.0.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hotwired-laravel/turbo-laravel.git",
+                "reference": "c824787ae21aacb77354f24c1aa48de5a2bd17c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hotwired-laravel/turbo-laravel/zipball/c824787ae21aacb77354f24c1aa48de5a2bd17c5",
+                "reference": "c824787ae21aacb77354f24c1aa48de5a2bd17c5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10",
+                "orchestra/testbench": "^8.14|^9.0",
+                "orchestra/workbench": "^8.0|^9.0",
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\HotwiredLaravel\\TurboLaravel\\TurboServiceProvider"
+                    ],
+                    "aliases": {
+                        "Turbo": "\\HotwiredLaravel\\TurboLaravel\\Facades\\Turbo",
+                        "TurboStream": "\\HotwiredLaravel\\TurboLaravel\\Facades\\TurboStream"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php",
+                    "src/globals.php"
+                ],
+                "psr-4": {
+                    "HotwiredLaravel\\TurboLaravel\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tony Messias",
+                    "email": "tonysm@hey.com",
+                    "homepage": "https://tonysm.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Turbo Laravel gives you a set of conventions to make the most out of the Hotwire stack (inspired by turbo-rails gem).",
+            "homepage": "https://github.com/hotwired-laravel/turbo-laravel",
+            "keywords": [
+                "hotwire",
+                "hotwired",
+                "turbo",
+                "turbo-laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/hotwired-laravel/turbo-laravel/issues",
+                "source": "https://github.com/hotwired-laravel/turbo-laravel/tree/2.0.0-beta5"
+            },
+            "time": "2024-03-27T03:17:34+00:00"
         },
         {
             "name": "laravel/breeze",
@@ -3183,6 +3381,66 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-20T07:29:11+00:00"
         },
         {
             "name": "symfony/clock",
@@ -9058,7 +9316,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "hotwired-laravel/turbo-laravel": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
