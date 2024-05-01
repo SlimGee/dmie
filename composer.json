@@ -10,7 +10,9 @@
         "hotwired-laravel/turbo-laravel": "^2.0.0-beta1",
         "laravel/breeze": "^2.0",
         "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "php-ai/php-ml": "^0.10.0",
+        "scheb/yahoo-finance-api": "^4.10"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

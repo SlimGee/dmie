@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCompanyRequest;
 use App\Http\Requests\UpdateCompanyRequest;
 use App\Models\Company;
+use Phpml\Regression\LeastSquares;
 
 class CompanyController extends Controller
 {
@@ -22,6 +23,40 @@ class CompanyController extends Controller
     public function create()
     {
         return view('companies.create');
+    }
+
+    public function analysis(Company $company)
+    {
+        $financials = $company->financials;
+
+        $investmentEfficiencies = $financials->pluck('investment_efficiency')->filter()->toArray();
+        $debtMaturities = $financials->pluck('debt_maturity')->filter()->toArray();
+        $financialReportingQualities = $financials->pluck('reporting_quality')->map(fn($v) => (float) $v)->filter()->toArray();
+
+        $debtMaturities = array_values(array_map(function ($val) {
+            return [(float) $val];
+        }, array_values($debtMaturities)));
+
+        $investmentEfficiencies = array_values(array_map(function ($val) {
+            return [(float) $val];
+        }, array_values($investmentEfficiencies)));
+
+        $regression = new LeastSquares();
+        $regression->train($investmentEfficiencies, array_values($financialReportingQualities));
+        $ieVsFrqCE = $regression->getCoefficients()[0];
+        $ieVsFrqIntercept = $regression->getIntercept();
+
+        $regression = new LeastSquares();
+        $regression->train($debtMaturities, array_values($financialReportingQualities));
+        $dmVsFrqCE = $regression->getCoefficients()[0];
+        $dmVsFrqIntercept = $regression->getIntercept();
+
+        return view('analysis.results', compact(
+            'ieVsFrqCE',
+            'ieVsFrqIntercept',
+            'dmVsFrqCE',
+            'dmVsFrqIntercept',
+        ));
     }
 
     /**

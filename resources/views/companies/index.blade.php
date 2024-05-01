@@ -11,6 +11,10 @@
                 <a href="{{ route('companies.create') }}">
                     <x-primary-button>Create Company</x-primary-button>
                 </a>
+                <a href="{{ route('calculate') }}">
+                    <x-primary-button>View Overall Analysis</x-primary-button>
+                </a>
+
             </div>
             <div class="p-4 bg-white shadow sm:p-8 sm:rounded-lg">
                 <div class="">
@@ -51,6 +55,10 @@
                                                         {{ $company->address }}</td>
                                                     <td
                                                         class="py-4 px-6 text-sm font-medium whitespace-nowrap text-end">
+                                                        <a href="{{ route('companies.financials.index', $company) }}"
+                                                            class="inline-flex gap-x-2 items-center text-sm font-semibold text-blue-600 rounded-lg border border-transparent dark:text-blue-500 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:hover:text-blue-400">
+                                                            View Financials
+                                                        </a>
                                                         <a href="{{ route('companies.edit', $company) }}"
                                                             class="inline-flex gap-x-2 items-center text-sm font-semibold text-blue-600 rounded-lg border border-transparent dark:text-blue-500 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:hover:text-blue-400">
                                                             Edit
